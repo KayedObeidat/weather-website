@@ -41,7 +41,7 @@ header a {
 
 .style {
     width: 250px;
-    float: left;
+    margin-left: 50%;
 }
 
 input {
