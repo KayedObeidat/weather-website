@@ -10,6 +10,8 @@ const app = express() //to store the express application , we call express() to 
 //someone try to get the resource at a specific url
 //maybe we should send back HTML or JSON
 
+const port = process.env.PORT || 3000 //process.env.PORT = extract the value thar heroku peovides that is available
+
 //Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(path.join(__dirname, '../templates/views'))
@@ -130,6 +132,6 @@ app.get('*', (req, res) => {    //to send a message to the user that the link yo
     })     
 })  
 
-app.listen(3000, () => { // start up the server, it takes the port as the parameter
-    console.log('Server is up on port 3000')
+app.listen(port, () => { // start up the server, it takes the port as the parameter
+    console.log('Server is up on port ' + port)
 }) 
