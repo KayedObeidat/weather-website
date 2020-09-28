@@ -42,7 +42,7 @@ header a {
 .style {
     width: 500px;
     margin-left: 75%;
-    border-radius: 50%;
+    border-radius: 10%;
 }
 
 input {
